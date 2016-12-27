@@ -4,6 +4,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://raw.githubusercontent.com/l-lin/angular-datatables/master/LICENSE
  */
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -16,10 +17,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-import { Directive, ElementRef, Inject, Input } from '@angular/core';
-import 'jquery';
-import 'datatables.net';
-export var DataTableDirective = (function () {
+var core_1 = require('@angular/core');
+require('jquery');
+require('datatables.net');
+var DataTableDirective = (function () {
     function DataTableDirective(el) {
         this.el = el;
         this.dtOptions = $.extend(true, {}, $.fn.DataTable.defaults);
@@ -34,16 +35,17 @@ export var DataTableDirective = (function () {
         });
     };
     __decorate([
-        Input(), 
+        core_1.Input(), 
         __metadata('design:type', Object)
     ], DataTableDirective.prototype, "dtOptions", void 0);
     DataTableDirective = __decorate([
-        Directive({
+        core_1.Directive({
             selector: '[datatable]'
         }),
-        __param(0, Inject(ElementRef)), 
-        __metadata('design:paramtypes', [ElementRef])
+        __param(0, core_1.Inject(core_1.ElementRef)), 
+        __metadata('design:paramtypes', [core_1.ElementRef])
     ], DataTableDirective);
     return DataTableDirective;
 }());
+exports.DataTableDirective = DataTableDirective;
 //# sourceMappingURL=angular-datatables.directive.js.map
