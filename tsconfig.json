@@ -18,6 +18,7 @@
   "files": [
     "src/angular-datatables.ts",
     "src/angular-datatables.directive.ts",
-    "src/angular-datatables.directive.spec.ts"
+    "src/angular-datatables.directive.spec.ts",
+    "index.ts"
   ]
 }
